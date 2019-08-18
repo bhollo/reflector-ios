@@ -19,6 +19,8 @@ class ReflectorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.shared.isIdleTimerDisabled = true
+        UIScreen.main.brightness = 1
        /* let timeToSleep = UInt32(0.5)
         let thread = Thread {
             while(self.running){
