@@ -29,10 +29,7 @@ class ReflectorViewController: UIViewController {
             }
         }
         thread.start()*/
-        
         timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(self.changeBackground), userInfo: nil, repeats: true)
-
-       // self.changeBackground()
     }
     
     @objc func changeBackground(){
