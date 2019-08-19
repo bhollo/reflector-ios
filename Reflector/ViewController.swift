@@ -14,14 +14,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var picker:UIPickerView!
     
     var pickerData: [String] = [String]()
-    var selectedColor: UIColor?
-    var interval: Double = 0.5
+    var selectedColor: UIColor = UIColor.red
+    var interval: Int = 500
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
+
         pickerData = ["Red", "Green", "Yellow", "Blue"]
     }
     
@@ -33,8 +33,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return pickerData.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData[row]
+        var color = UIColor.black
+        switch titleData {
+        case "Red":
+            color = UIColor.red
+            
+        case "Green":
+            color = UIColor.green
+            
+        case "Yellow":
+            color = UIColor.yellow
+        case "Blue":
+            color = UIColor.blue
+        default:
+            color = UIColor.black
+        }
+        
+        let title = NSAttributedString(string: titleData, attributes: [NSAttributedString.Key.foregroundColor: color])
+        
+        return title
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -42,10 +61,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         switch item{
         case "Red":
             selectedColor = UIColor.red
-            
+
         case "Green":
             selectedColor = UIColor.green
-            
+
+
         case "Yellow":
             selectedColor = UIColor.yellow
             
@@ -58,21 +78,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-        let progress = Double(sender.value)
+        let progress = Int(sender.value)
         if (progress <= 0){
-            interval = 0.5
+            interval = 500
             return
         }
-        interval = 1/progress
+        interval = 500/progress
     }
     
-    @IBAction func onStartClicked(_ sender: Any) {
-        let controller: ReflectorViewController = ReflectorViewController()
-        controller.interval = interval
-        controller.selectedColor = selectedColor
-        
-        self.present(controller, animated: true, completion: nil)
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? ReflectorViewController
+        let time = Double(interval)
+        controller?.interval = time/1000
+        controller?.selectedColor = selectedColor
     }
 }
 
