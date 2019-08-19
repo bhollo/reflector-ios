@@ -19,7 +19,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super .viewDidLoad()
-        // Connect data:
         self.picker.delegate = self
         self.picker.dataSource = self
 
@@ -79,20 +78,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     @IBAction func sliderValueChanged(_ sender: UISlider) {
-       /* let progress = Double(sender.value)
-        if (progress <= 0){
-            interval = 0.5
-            return
-        }
-        interval = 1/progress*/
-        
         let progress = Int(sender.value)
         if (progress <= 0){
             interval = 500
             return
         }
         interval = 500/progress
-
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,15 +92,5 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         controller?.interval = time/1000
         controller?.selectedColor = selectedColor
     }
-    
-   /* @IBAction func onStartClicked(_ sender: Any) {
-        let controller: ReflectorViewController = ReflectorViewController()
-        let time = Double(interval)
-        controller.interval = time/1000
-        controller.selectedColor = selectedColor
-        
-        self.present(controller, animated: true, completion: nil)
-        
-    }*/
 }
 

@@ -12,25 +12,12 @@ class ReflectorViewController: UIViewController {
     
     var interval: Double = 0.5
     var selectedColor: UIColor?
-    
-    private var running = true
-    
-    private var timer: Timer!
+        private var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.isIdleTimerDisabled = true
         UIScreen.main.brightness = 1
-       /* let timeToSleep = UInt32(0.5)
-        let thread = Thread {
-            while(self.running){
-                sleep(timeToSleep)
-                DispatchQueue.main.async {
-                    self.changeBackground()
-                }
-            }
-        }
-        thread.start()*/
         timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(self.changeBackground), userInfo: nil, repeats: true)
     }
     
@@ -43,15 +30,4 @@ class ReflectorViewController: UIViewController {
             self.view.backgroundColor = self.selectedColor
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
