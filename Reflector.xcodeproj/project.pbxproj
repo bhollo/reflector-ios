@@ -78,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93207932231CE33D00486D4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9347A33522F36FBC00EAB189 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +92,7 @@
 				9347A35522F36FBF00EAB189 /* ReflectorTests */,
 				9347A36022F36FBF00EAB189 /* ReflectorUITests */,
 				9347A33F22F36FBD00EAB189 /* Products */,
+				93207932231CE33D00486D4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -207,6 +215,11 @@
 				TargetAttributes = {
 					9347A33D22F36FBD00EAB189 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					9347A35122F36FBF00EAB189 = {
 						CreatedOnToolsVersion = 10.1;
@@ -448,7 +461,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 358Z362Y7V;
 				INFOPLIST_FILE = Reflector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +471,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bhollo.Reflector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -465,7 +481,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 358Z362Y7V;
 				INFOPLIST_FILE = Reflector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,6 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bhollo.Reflector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
