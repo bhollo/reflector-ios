@@ -3,16 +3,18 @@
 //  Reflector
 //
 //  Created by derrick rocha on 8/1/19.
-//  Copyright © 2019 derrick rocha. All rights reserved.
+//  Copyright © 2019 Bhollo. All rights reserved.
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var picker:UIPickerView!
-    
+    @IBOutlet weak var ad: GADBannerView!
+
     var pickerData: [String] = [String]()
     var selectedColor: UIColor = UIColor.red
     var interval: Int = 500
@@ -23,6 +25,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         self.picker.dataSource = self
 
         pickerData = ["Red", "Green", "Yellow", "Blue"]
+        
+        setupBanner()
+    }
+    
+    func setupBanner(){
+        let isPaid = Environment.isPaid
+        if(isPaid){
+            ad.isHidden = true
+        }
+        else{
+            ad.isHidden = false
+            ad.adUnitID = Environment.adMobUnitId
+            ad.rootViewController = self
+            ad.load(GADRequest())
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -34,6 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        
         let titleData = pickerData[row]
         var color = UIColor.black
         switch titleData {
