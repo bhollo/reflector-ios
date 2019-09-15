@@ -3,7 +3,8 @@
 //  Reflector
 //
 //  Created by derrick rocha on 8/1/19.
-//  Copyright © 2019 derrick rocha. All rights reserved.
+//  Copyright © 2019 Bhollo. All rights reserved.
+
 //
 
 import UIKit

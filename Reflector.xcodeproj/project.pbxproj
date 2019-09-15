@@ -677,7 +677,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Reflector/Configs/Info.plist";
-
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -709,11 +708,34 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reflector.app/Reflector";
 			};
+			name = "Release (Free)";
+		};
+		9347A36A22F36FBF00EAB189 /* Debug (Free) */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221E44857A4D5060E67B0619 /* Pods-ReflectorTests.debug (free).xcconfig */;
+
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ReflectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = bhollo.ReflectorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reflector.app/Reflector";
+			};
 			name = "Debug (Free)";
 		};
 		9347A36B22F36FBF00EAB189 /* Release (Free) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 493E1ADC312E5019B96BFB28 /* Pods-ReflectorTests.release (free).xcconfig */;
+
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -755,6 +777,7 @@
 		9347A36E22F36FBF00EAB189 /* Release (Free) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74FEBDC49A0E08B4910B8A06 /* Pods-ReflectorUITests.release (free).xcconfig */;
+
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -891,6 +914,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Reflector;
 			};
+
 			name = "Debug (Paid)";
 		};
 		939A49D0232C4C18009D4543 /* Release (Paid) */ = {
