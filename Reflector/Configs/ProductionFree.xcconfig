@@ -4,6 +4,7 @@
 //
 //  Created by derrick rocha on 9/14/19.
 //  Copyright © 2019 Bhollo. All rights reserved.
+
 //
 
 // Configuration settings file format documentation can be found at:
@@ -17,4 +18,3 @@ TYPE = free
 // AdMob
 AD_MOB_APP_ID = ca-app-pub-4139767682422943~7651062060
 AD_MOB_UNIT_ID = ca-app-pub-4139767682422943/5110612919
-
