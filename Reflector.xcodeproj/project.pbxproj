@@ -318,6 +318,11 @@
 				TargetAttributes = {
 					9347A33D22F36FBD00EAB189 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					9347A35122F36FBF00EAB189 = {
 						CreatedOnToolsVersion = 10.1;
@@ -649,6 +654,7 @@
 			baseConfigurationReference = B0F306C8C6B8655FB18C6B79 /* Pods-Reflector.debug (free).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Reflector/Configs/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -657,6 +663,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bhollo.Reflector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -667,14 +674,17 @@
 			baseConfigurationReference = D238F831FD3D205F2D0F29B3 /* Pods-Reflector.release (free).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Reflector/Configs/Info.plist";
+
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bhollo.Reflector;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
