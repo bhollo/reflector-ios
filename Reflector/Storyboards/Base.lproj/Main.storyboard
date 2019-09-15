@@ -77,19 +77,30 @@
                                     <segue destination="n4y-tf-XrQ" kind="show" id="8uT-d5-oQ7"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1y-qy-Kvo" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="686" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tuz-Dq-10b"/>
+                                    <constraint firstAttribute="width" constant="320" id="Yae-tv-Q2d"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ltU-Tb-kE5" secondAttribute="trailing" constant="16" id="4Uk-2U-Xcx"/>
                             <constraint firstItem="ltU-Tb-kE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8U9-jm-qMJ"/>
                             <constraint firstItem="w0E-Rl-XBh" firstAttribute="top" secondItem="ltU-Tb-kE5" secondAttribute="bottom" constant="32" id="DV9-b2-KqE"/>
+                            <constraint firstItem="j1y-qy-Kvo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GYw-1w-O4a"/>
                             <constraint firstItem="ltU-Tb-kE5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="fqB-1I-GHg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j1y-qy-Kvo" secondAttribute="bottom" id="lj9-M9-Xef"/>
                             <constraint firstItem="w0E-Rl-XBh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zQR-xP-kLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="gkL-pX-RTl"/>
                     <connections>
+                        <outlet property="ad" destination="j1y-qy-Kvo" id="ojv-3O-FDx"/>
                         <outlet property="picker" destination="ouh-u1-QQw" id="hf5-xT-teP"/>
                         <outlet property="slider" destination="Ruo-DU-Rkd" id="SZ3-eL-3yi"/>
                     </connections>
