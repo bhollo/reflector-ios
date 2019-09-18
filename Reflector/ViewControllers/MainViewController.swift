@@ -9,7 +9,7 @@
 import UIKit
 import GoogleMobileAds
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var picker:UIPickerView!
@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var pickerData: [String] = [String]()
     var selectedColor: UIColor = UIColor.red
     var interval: Int = 500
+    var forSOS: Bool = false
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -95,6 +96,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
 
+    @IBAction func onSOSButtonClicked(_ sender: Any) {
+        forSOS = true
+    }
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let progress = Int(sender.value)
         if (progress <= 0){
@@ -109,6 +113,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let time = Double(interval)
         controller?.interval = time/1000
         controller?.selectedColor = selectedColor
+        controller?.forSOS = forSOS
     }
 }
 

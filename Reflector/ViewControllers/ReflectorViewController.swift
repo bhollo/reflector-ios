@@ -12,13 +12,40 @@ class ReflectorViewController: UIViewController {
     
     var interval: Double = 0.5
     var selectedColor: UIColor?
-        private var timer: Timer!
+    var forSOS: Bool = false
+    
+    let sosIntervals = [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 1, 0.25, 1, 0.25, 1, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 1]
+    
+    
+    var running: Bool = true
+    
+    private var timer: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.isIdleTimerDisabled = true
         UIScreen.main.brightness = 1
-        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(self.changeBackground), userInfo: nil, repeats: true)
+        if(forSOS){
+            startSOSSequence()
+        }
+        else{
+            timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(self.changeBackground), userInfo: nil, repeats: true)
+        }
+    }
+    
+    private func startSOSSequence(){
+        DispatchQueue.global(qos: .background).async
+            {
+                while(self.running){
+                    for interval in self.sosIntervals{
+                        DispatchQueue.main.async //serial queue
+                            {
+                                self.changeBackground()
+                        }
+                        Thread.sleep(forTimeInterval: interval)
+                    }
+                }
+        }
     }
     
     @objc func changeBackground(){
@@ -29,5 +56,10 @@ class ReflectorViewController: UIViewController {
         else{
             self.view.backgroundColor = self.selectedColor
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        running = false
+        timer.invalidate()
     }
 }
