@@ -10,10 +10,9 @@
 		4C6B7780A770519BF31BD9E7 /* Pods_Reflector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12A317C71AF7005890BF5A5 /* Pods_Reflector.framework */; };
 		7FC5BA3261FA4F18711115C3 /* Pods_ReflectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541B1466AB98CE937B6C99E2 /* Pods_ReflectorUITests.framework */; };
 		9347A34222F36FBD00EAB189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347A34122F36FBD00EAB189 /* AppDelegate.swift */; };
-		9347A34422F36FBD00EAB189 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347A34322F36FBD00EAB189 /* ViewController.swift */; };
+		9347A34422F36FBD00EAB189 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347A34322F36FBD00EAB189 /* MainViewController.swift */; };
 		9347A34722F36FBD00EAB189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9347A34522F36FBD00EAB189 /* Main.storyboard */; };
 		9347A34922F36FBE00EAB189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9347A34822F36FBE00EAB189 /* Assets.xcassets */; };
-		9347A34C22F36FBE00EAB189 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9347A34A22F36FBE00EAB189 /* LaunchScreen.storyboard */; };
 		9347A35722F36FBF00EAB189 /* ReflectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347A35622F36FBF00EAB189 /* ReflectorTests.swift */; };
 		9347A36222F36FBF00EAB189 /* ReflectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9347A36122F36FBF00EAB189 /* ReflectorUITests.swift */; };
 		934A357C2309DF4800FE1D89 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934A357B2309DF4800FE1D89 /* MainNavigationController.swift */; };
@@ -53,10 +52,9 @@
 		8904EB0264B074EFDEB530D1 /* Pods-ReflectorTests.debug (paid).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReflectorTests.debug (paid).xcconfig"; path = "Target Support Files/Pods-ReflectorTests/Pods-ReflectorTests.debug (paid).xcconfig"; sourceTree = "<group>"; };
 		9347A33E22F36FBD00EAB189 /* Reflector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reflector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9347A34122F36FBD00EAB189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9347A34322F36FBD00EAB189 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9347A34322F36FBD00EAB189 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9347A34622F36FBD00EAB189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9347A34822F36FBE00EAB189 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9347A34B22F36FBE00EAB189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9347A34D22F36FBE00EAB189 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9347A35222F36FBF00EAB189 /* ReflectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReflectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9347A35622F36FBF00EAB189 /* ReflectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectorTests.swift; sourceTree = "<group>"; };
@@ -185,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				934A357B2309DF4800FE1D89 /* MainNavigationController.swift */,
-				9347A34322F36FBD00EAB189 /* ViewController.swift */,
+				9347A34322F36FBD00EAB189 /* MainViewController.swift */,
 				93E980C22305BC640008D3B5 /* ReflectorViewController.swift */,
 			);
 			path = ViewControllers;
@@ -194,7 +192,6 @@
 		939A49D6232C78F2009D4543 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				9347A34A22F36FBE00EAB189 /* LaunchScreen.storyboard */,
 				9347A34522F36FBD00EAB189 /* Main.storyboard */,
 			);
 			path = Storyboards;
@@ -359,7 +356,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9347A34C22F36FBE00EAB189 /* LaunchScreen.storyboard in Resources */,
 				9347A34922F36FBE00EAB189 /* Assets.xcassets in Resources */,
 				9347A34722F36FBD00EAB189 /* Main.storyboard in Resources */,
 			);
@@ -473,7 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E980C32305BC640008D3B5 /* ReflectorViewController.swift in Sources */,
-				9347A34422F36FBD00EAB189 /* ViewController.swift in Sources */,
+				9347A34422F36FBD00EAB189 /* MainViewController.swift in Sources */,
 				934A357C2309DF4800FE1D89 /* MainNavigationController.swift in Sources */,
 				9347A34222F36FBD00EAB189 /* AppDelegate.swift in Sources */,
 				9390E1FD232D78B200B9353D /* Environment.swift in Sources */,
@@ -518,14 +514,6 @@
 				9347A34622F36FBD00EAB189 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9347A34A22F36FBE00EAB189 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9347A34B22F36FBE00EAB189 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -708,34 +696,11 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reflector.app/Reflector";
 			};
-			name = "Release (Free)";
-		};
-		9347A36A22F36FBF00EAB189 /* Debug (Free) */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 221E44857A4D5060E67B0619 /* Pods-ReflectorTests.debug (free).xcconfig */;
-
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ReflectorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = bhollo.ReflectorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reflector.app/Reflector";
-			};
 			name = "Debug (Free)";
 		};
 		9347A36B22F36FBF00EAB189 /* Release (Free) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 493E1ADC312E5019B96BFB28 /* Pods-ReflectorTests.release (free).xcconfig */;
-
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -777,7 +742,6 @@
 		9347A36E22F36FBF00EAB189 /* Release (Free) */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74FEBDC49A0E08B4910B8A06 /* Pods-ReflectorUITests.release (free).xcconfig */;
-
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -914,7 +878,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Reflector;
 			};
-
 			name = "Debug (Paid)";
 		};
 		939A49D0232C4C18009D4543 /* Release (Paid) */ = {

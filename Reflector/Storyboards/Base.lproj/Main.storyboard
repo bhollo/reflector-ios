@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reflector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Reflector" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +85,14 @@
                                     <constraint firstAttribute="width" constant="320" id="Yae-tv-Q2d"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="sos" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlp-fr-XU0">
+                                <rect key="frame" x="192" y="528" width="30" height="30"/>
+                                <state key="normal" title="SOS"/>
+                                <connections>
+                                    <action selector="onSOSButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Prb-Mg-nc3"/>
+                                    <segue destination="n4y-tf-XrQ" kind="show" id="oAE-3u-AGL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -92,8 +100,10 @@
                             <constraint firstItem="ltU-Tb-kE5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8U9-jm-qMJ"/>
                             <constraint firstItem="w0E-Rl-XBh" firstAttribute="top" secondItem="ltU-Tb-kE5" secondAttribute="bottom" constant="32" id="DV9-b2-KqE"/>
                             <constraint firstItem="j1y-qy-Kvo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GYw-1w-O4a"/>
+                            <constraint firstItem="vlp-fr-XU0" firstAttribute="top" secondItem="w0E-Rl-XBh" secondAttribute="bottom" constant="16" id="L3E-zy-1cd"/>
                             <constraint firstItem="ltU-Tb-kE5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="fqB-1I-GHg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j1y-qy-Kvo" secondAttribute="bottom" id="lj9-M9-Xef"/>
+                            <constraint firstItem="vlp-fr-XU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfb-NV-pHz"/>
                             <constraint firstItem="w0E-Rl-XBh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zQR-xP-kLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -143,4 +153,7 @@
             <point key="canvasLocation" x="-890.39999999999998" y="-0.44977511244377816"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oAE-3u-AGL"/>
+    </inferredMetricsTieBreakers>
 </document>
