@@ -60,6 +60,5 @@ class ReflectorViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         running = false
-        timer.invalidate()
     }
 }
